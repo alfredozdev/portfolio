@@ -1,14 +1,32 @@
 ---
+import GitHubIcon from "../../public/icons/GitHub.astro"
 import CodeIcon from "../../public/icons/Code.astro"
-import ProjectItem from "./ProjectItem.astro"
+import React from "../../public/icons/React.astro"
+import JavaScript from "../../public/icons/JavaScript.astro"
+import TypeScript from "../../public/icons/TypeScript.astro"
+import CSS from "../../public/icons/CSS.astro"
+import Vite from "../../public/icons/Vite.astro"
+import Vercel from "../../public/icons/Vercel.astro"
+import TailWind from "../../public/icons/Tailwind.astro"
+
+const tags = {
+    React: { name: 'React', icon: React, class: 'bg-[#006577] text-white' },
+    JavaScript: { name: 'JavaScript', icon: JavaScript, class: 'bg-[#696022] text-white' },
+    TypeScript: { name: 'TypeScript', icon: TypeScript, class: 'bg-[#16375b] text-white' },
+    CSS: { name: 'CSS', icon: CSS, class: 'bg-[#0f1f5d] text-white' },
+    Tailwind : { name: 'Tailwind', icon: TailWind, class: 'bg-[#195671] text-white' },
+    Vite: { name: 'Vite', icon: Vite, class: 'bg-[#5d197d] text-white', },
+    Vercel: { name: 'Vercel', icon: Vercel, class: 'bg-black text-white', }
+}
+
 const projects = [
     {
-        title: 'Carrito de Compras',
+        title: 'Carrito de Compras JS',
         description: 'Carrito de Compras es una aplicación web desarrollada con React que permite a los usuarios agregar, eliminar y gestionar guitarras en su carrito de compras.',
         link: 'https://carritocompras-iota.vercel.app/',
         github: 'https://github.com/frediiesp/carritocompras',
         image: '../../public/projects/screenshop.webp',
-        tags: ['React', 'Vite', 'Vercel', 'CSS']
+        tags: [tags.React, tags.JavaScript, tags.CSS, tags.Vite, tags.Vercel]
     },
     {
         title: 'Calculadora de Propinas',
@@ -16,7 +34,15 @@ const projects = [
         link: 'https://calculadorapropinas.vercel.app/',
         github: 'https://github.com/frediiesp/calculadorapropinas',
         image: '../../public/projects/screentips.webp',
-        tags: ['React', 'Vite', 'Vercel', 'CSS']
+        tags: [tags.React, tags.TypeScript, tags.Tailwind, tags.Vite, tags.Vercel]
+    },
+    {
+        title: 'Carrito de Compras TS',
+        description: 'Carrito de Compras es una aplicación web desarrollada con React que permite a los usuarios agregar, eliminar y gestionar guitarras en su carrito de compras.',
+        link: 'https://carritocompras-ts.vercel.app/',
+        github: 'https://github.com/frediiesp/carritocompras_ts',
+        image: '../../public/projects/screenshop.webp',
+        tags: [tags.React, tags.TypeScript, tags.CSS, tags.Vite, tags.Vercel]
     }
 ]
 ---
@@ -28,8 +54,40 @@ const projects = [
 <div>
     {
         projects.map(project => (
-        <article class="mb-10">
-            <ProjectItem {...project}/>
+        <article class="mb-10 flex items-center">
+            <div class="pr-10">
+                <a href={project.github}>
+                    <h3 class="flex flex-wrap gap-x-2 items-center mb-2 text-lg font-semibold text-yellow-200/90 mt-2"> 
+                        {project.title} <GitHubIcon class="size-3 md:size-4"/>
+                    </h3>
+                </a>
+                <p class="mb-3 text-base font-normal text-white">
+                    {project.description}
+                </p>
+                <ul class="flex gap-3 flex-wrap">
+                    {project.tags.map(tag => (
+                        <li>
+                            <span class={
+                                    `flex gap-x-2
+                                    border border-white/15 rounded-full
+                                    text-xs ${tag.class}
+                                    py-1 px-2
+                                    transition
+                                    hover:bg-white/10`}>
+                                <tag.icon class="size-4" />
+                                {tag.name}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <a href={project.link}>
+                <img
+                    class="rounded max-w-xs transition hover:scale-105"
+                    src={project.image}
+                    alt={`Captura de pantalla del proyecto ${project.image}`}
+                />
+            </a>
         </article>
         ))
     }
