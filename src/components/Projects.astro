@@ -1,0 +1,36 @@
+---
+import CodeIcon from "../../public/icons/Code.astro"
+import ProjectItem from "./ProjectItem.astro"
+const projects = [
+    {
+        title: 'Carrito de Compras',
+        description: 'Carrito de Compras es una aplicación web desarrollada con React que permite a los usuarios agregar, eliminar y gestionar guitarras en su carrito de compras.',
+        link: 'https://carritocompras-iota.vercel.app/',
+        github: 'https://github.com/frediiesp/carritocompras',
+        image: '../../public/projects/screenshop.webp',
+        tags: ['React', 'Vite', 'Vercel', 'CSS']
+    },
+    {
+        title: 'Calculadora de Propinas',
+        description: 'Calculadora de Propinas es una aplicación web desarrollada con React que permite a los usuarios agregar, eliminar y gestionar alimentos para una orden y calcular el total a pagar de acuerdo a un porcentaje de propinas.',
+        link: 'https://calculadorapropinas.vercel.app/',
+        github: 'https://github.com/frediiesp/calculadorapropinas',
+        image: '../../public/projects/screentips.webp',
+        tags: ['React', 'Vite', 'Vercel', 'CSS']
+    }
+]
+---
+
+<h2 class="text-2xl font-semibold mb-6 flex gap-x-4 items-center">
+    <CodeIcon class="size-7"/>
+    Proyectos
+<h2/>
+<div>
+    {
+        projects.map(project => (
+        <article class="mb-10">
+            <ProjectItem {...project}/>
+        </article>
+        ))
+    }
+</div>

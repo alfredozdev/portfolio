@@ -1,0 +1,39 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+import BriefcaseIcon from "../../public/icons/Briefcase.astro"
+const experience = [
+    {
+        date: 'Abril 2021 - Mayo 2024',
+        title: 'Desarrollador Full Stack',
+        company: 'Vianney Textil Hogar',
+        description: '• Desarrollo de aplicaciones web utilizando tecnologías como Angular 10, NodeJs 17, .NET con arquitectura MVC, GitLab y Oracle. • Desarrollo de servicios automatizados de Windows usando C# y NodeJS. • Desarrollo y consumo de API REST usando .NET y NodeJS.  • Creación de paquetes, procedimientos y programación en Oracle PL/SQL.',
+        link: '#'
+    },
+    {
+        date: 'Mayo 2019 - Marzo 2021',
+        title: 'Desarrollador Front End en Angular',
+        company: 'Boz IT Development',
+        description: '• Desarrollo FrontEnd de plataforma web robusta usando tecnologías como Angular 8, JavaScript, maquetado en HTML y CSS, apoyando a BackEnd con .NET y SQL. • Trabajo con metodología SCRUM.'
+    },
+    {
+        date: 'Septiembre 2018 - Mayo 2019',
+        title: 'Desarrollador Full Stack en .NET',
+        company: 'Informatic Help Agenc',
+        description: '• Desarrollo FullStack de plataforma web para control de documentos fiscales usando tecnologías como .NET en arquitectura MVC.'
+    }
+]
+---
+
+<h2 class="text-2xl font-semibold mb-6 flex gap-x-4 items-center">
+    <BriefcaseIcon class="size-7"/>
+    Experiencia Laboral
+<h2/>
+<ol class="relative border-s border-gray-200 ml-2">
+    {
+        experience.map(exp => (
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...exp}/>
+        </li>
+        ))
+    }
+</ol>

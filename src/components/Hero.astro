@@ -1,0 +1,29 @@
+---
+import Badge from './BadgeGreen.astro';
+import SocialPill from './SocialPill.astro';
+import LinkedInIcon from '../../public/icons/LinkedIn.astro';
+import GitHubIcon from '../../public/icons/GitHub.astro';
+import MailIcon from '../../public/icons/Mail.astro';
+---
+
+<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4 lg:pb-6 ">
+    Hey, soy Alfredo <a href="https://www.linkedin.com/in/alfredozdev/" target="_blank" rel="noopener" class="flex justify-center items-center">
+        <Badge>Estoy disponible para chambear<Badge/>
+    </a>
+</h1>
+<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+    <span>+5 años de experiencia. </span>
+    <span class="text-yellow-200/90">Desarrollador Full Stack con experiencia en tecnologías como React, Angular, .NET y NodeJS. </span>
+    <span class="opacity-75">Siempre estoy abierto a aprender y adaptarme a nuevas tecnologías.</span>
+</h2>
+<nav class="flex gap-4 mt-7 flex-wrap">
+    <SocialPill href="https://www.linkedin.com/in/alfredozdev/">
+        <LinkedInIcon class="size-4 md:size-6"/> LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/frediiesp">
+        <GitHubIcon class="size-4 md:size-6"/> GitHub
+    </SocialPill>
+    <SocialPill href="mailto:alfredoz.dev@gmail.com">
+        <MailIcon class="size-4 md:size-6"/> alfredoz.dev@gmail.com
+    </SocialPill>
+</nav>
