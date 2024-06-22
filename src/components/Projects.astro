@@ -8,6 +8,7 @@ import CSS from "../../public/icons/CSS.astro"
 import Vite from "../../public/icons/Vite.astro"
 import Vercel from "../../public/icons/Vercel.astro"
 import TailWind from "../../public/icons/Tailwind.astro"
+import AstroIcon from "../../public/icons/AstroIcon.astro"
 
 const tags = {
     React: { name: 'React', icon: React, class: 'bg-[#006577] text-white' },
@@ -15,22 +16,31 @@ const tags = {
     TypeScript: { name: 'TypeScript', icon: TypeScript, class: 'bg-[#16375b] text-white' },
     CSS: { name: 'CSS', icon: CSS, class: 'bg-[#0f1f5d] text-white' },
     Tailwind : { name: 'Tailwind', icon: TailWind, class: 'bg-[#195671] text-white' },
-    Vite: { name: 'Vite', icon: Vite, class: 'bg-[#5d197d] text-white', },
-    Vercel: { name: 'Vercel', icon: Vercel, class: 'bg-black text-white', }
+    Vite: { name: 'Vite', icon: Vite, class: 'bg-[#5d197d] text-white' },
+    Vercel: { name: 'Vercel', icon: Vercel, class: 'bg-black text-white' },
+    Astro: { name: 'Astro', icon: AstroIcon, class: 'bg-[#af3f00] text-white' }
 }
 
 const projects = [
     {
         title: 'Carrito de Compras JS',
-        description: 'Carrito de Compras es una aplicación web desarrollada con React que permite a los usuarios agregar, eliminar y gestionar guitarras en su carrito de compras.',
+        description: 'Es mi primer aplicación web desarrollada mientras aprendo React. Aquí aprendí a usar los Hooks useState y useEffect, aprendí a crear mis propios Hooks y también a usar localStorage para conservar los elementos del carrito aun cuando se recarga la pagina.',
         link: 'https://carritocompras-iota.vercel.app/',
         github: 'https://github.com/frediiesp/carritocompras',
         image: '/projects/screenshop.webp',
         tags: [tags.React, tags.JavaScript, tags.CSS, tags.Vite, tags.Vercel]
     },
     {
+        title: 'Mi Portafolio',
+        description: 'Hecho desde cero en Astro como forma de aprendizaje de esta herramienta, está inspirado en el portafolio hecho por midudev. No esta terminado aun pero planeo agregarle algunos extras.',
+        link: 'https://portfolio-tau-seven-87.vercel.app/',
+        github: 'https://github.com/frediiesp/portfolio',
+        image: '/projects/screenport.webp',
+        tags: [tags.Astro, tags.Tailwind, tags.Vercel]
+    },
+    {
         title: 'Calculadora de Propinas',
-        description: 'Calculadora de Propinas es una aplicación web desarrollada con React que permite a los usuarios agregar, eliminar y gestionar alimentos para una orden y calcular el total a pagar de acuerdo a un porcentaje de propinas.',
+        description: 'Esta fue mi segunda aplicación mientras aprendo React. Acá aprendí a diferencias entre useMemo y useCallback, ademas fue mi primera vez usando Tailwind..',
         link: 'https://calculadorapropinas.vercel.app/',
         github: 'https://github.com/frediiesp/calculadorapropinas',
         image: '/projects/screentips.webp',
@@ -38,7 +48,7 @@ const projects = [
     },
     {
         title: 'Carrito de Compras TS',
-        description: 'Carrito de Compras es una aplicación web desarrollada con React que permite a los usuarios agregar, eliminar y gestionar guitarras en su carrito de compras.',
+        description: 'Este proyecto tiene el mismo funcionamiento que el anterior, sin embargo, este fue migrado en su totalidad a TypeScript.',
         link: 'https://carritocompras-ts.vercel.app/',
         github: 'https://github.com/frediiesp/carritocompras_ts',
         image: '/projects/screenshop.webp',
