@@ -4,6 +4,7 @@ import SocialPill from './SocialPill.astro';
 import LinkedInIcon from '../../public/icons/LinkedIn.astro';
 import GitHubIcon from '../../public/icons/GitHub.astro';
 import MailIcon from '../../public/icons/Mail.astro';
+import CVIcon from '../../public/icons/CV.astro';
 ---
 
 <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4 lg:pb-6 ">
@@ -25,5 +26,8 @@ import MailIcon from '../../public/icons/Mail.astro';
     </SocialPill>
     <SocialPill href="mailto:alfredoz.dev@gmail.com">
         <MailIcon class="size-4 md:size-6"/> alfredoz.dev@gmail.com
+    </SocialPill>
+    <SocialPill href="/documents/cv.pdf">
+        <CVIcon class="size-4 md:size-6"/>
     </SocialPill>
 </nav>

@@ -1,16 +1,23 @@
-<header class="px-10 md:px-12 lg:px-4">
-    <div class="flex justify-between items-center py-5 w-[480px] md:w-[600px] lg:w-[740px] xl:w-[1120px] mx-auto">
+---
+import Menu from "../../public/icons/Menu.astro"
+---
+<header class="px-12 md:px-20 lg:px-20">
+    <div class="flex justify-between items-center py-5 mx-auto">
+        <!-- w-[445px] md:w-[600px] lg:w-[740px] xl:w-[1120px] -->
         <img
             class=" rounded-full size-12"
             src="/avatar/me.jpg"
-            alt="alfredozdev photo">
-    
-        <nav class="flex flex-row gap-x-11 opacity-89">
+            alt="alfredozdev photo"
+        >
+        <div class="lg:hidden">
+            <Menu class="size-7"/>
+        </div>
+        <nav class="lg:flex hidden flex-row gap-x-11 opacity-89">
             <a href="">Inicio</a>
             <a href="#experiencia">Experiencia</a>
             <a href="#proyectos">Proyectos</a>
+            <a href="#habilidades">Habilidades</a>
             <a href="#sobremi">Sobre mi</a>
-            <a href="#contacto">Contacto</a>
         </nav>
     </div>
 </header>
