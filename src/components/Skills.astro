@@ -1,0 +1,50 @@
+---
+import FocoIcon from "../../public/icons/Foco.astro"
+import React from "../../public/icons/React.astro"
+import Angular from "../../public/icons/Angular.astro"
+import JavaScript from "../../public/icons/JavaScript.astro"
+import TypeScript from "../../public/icons/TypeScript.astro"
+import Node from "../../public/icons/Node.astro"
+import HTML from "../../public/icons/HTML.astro"
+import CSS from "../../public/icons/CSS.astro"
+import SQL from "../../public/icons/SQL.astro"
+import CSharp from "../../public/icons/CSharp.astro"
+import Git from "../../public/icons/Git.astro"
+import Bootstrap from "../../public/icons/Bootstrap.astro"
+import Tailwind from "../../public/icons/Tailwind.astro"
+import Wordpress from "../../public/icons/Wordpress.astro"
+
+const skills = [
+    { name: 'React', icon: React },
+    { name: 'Angular', icon: Angular },
+    { name: 'JavaScript', icon: JavaScript },
+    { name: 'TypeScript', icon: TypeScript },
+    { name: 'Node', icon: Node },
+    { name: 'HTML', icon: HTML },
+    { name: 'CSS', icon: CSS },
+    { name: 'SQL', icon: SQL },
+    { name: 'C#', icon: CSharp },
+    { name: 'Git', icon: Git },
+    { name: 'Bootstrap', icon: Bootstrap },
+    { name: 'Tailwind', icon: Tailwind },
+]
+---
+
+<h2 class="text-3xl font-semibold mb-6 flex gap-x-4 items-center">
+    <FocoIcon class="size-7"/>
+    Habilidades
+<h2/>
+
+<ul class="flex gap-10 flex-wrap">
+    {skills.map(skill => (
+        <li>
+            <span class={
+                    `flex
+                    py-1
+                    transition
+                    hover:scale-105`}>
+                <skill.icon class=" size-20" />
+            </span>
+        </li>
+    ))}
+</ul>
