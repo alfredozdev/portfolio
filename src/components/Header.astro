@@ -1,16 +1,16 @@
 ---
-import Menu from "../../public/icons/Menu.astro"
+import MenuIcon from "../../public/icons/Menu.astro"
 ---
-<header class="px-12 md:px-20 lg:px-20">
-    <div class="flex justify-between items-center py-5 mx-auto">
+<!-- <header class="px-12 md:px-20 lg:px-20">
+    <div class="flex justify-between items-center py-5 mx-auto"> -->
         <!-- w-[445px] md:w-[600px] lg:w-[740px] xl:w-[1120px] -->
-        <img
+        <!-- <img
             class=" rounded-full size-12"
             src="/avatar/me.jpg"
             alt="alfredozdev photo"
         >
         <div class="lg:hidden">
-            <Menu class="size-7"/>
+            <MenuIcon class="size-7"/>
         </div>
         <nav class="lg:flex hidden flex-row gap-x-11 opacity-89">
             <a href="">Inicio</a>
@@ -20,4 +20,33 @@ import Menu from "../../public/icons/Menu.astro"
             <a href="#sobremi">Sobre mi</a>
         </nav>
     </div>
-</header>
+</header> -->
+
+
+<nav class="fixed bg-[#121212] w-full top-0 start-0 border-b border-white/10 px-12 md:px-20 lg:px-20">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-3">
+        <img class=" rounded-full size-12" src="/avatar/me.jpg" alt="alfredozdev photo">
+        <div class="md:hidden">
+            <MenuIcon class="size-7"/>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
+                <li>
+                    <a href="#" class="block py-2 px-3 rounded md:p-0">Inicio</a>
+                </li>
+                <li>
+                    <a href="#experiencia" class="block py-2 px-3 rounded md:p-0">Experiencia</a>
+                </li>
+                <li>
+                    <a href="#proyectos" class="block py-2 px-3 rounded md:p-0">Proyectos</a>
+                </li>
+                <li>
+                    <a href="#habilidades" class="block py-2 px-3 rounded md:p-0">Habilidades</a>
+                </li>
+                <li>
+                    <a href="#sobremi" class="block py-2 px-3 rounded md:p-0">Sobre mi</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
