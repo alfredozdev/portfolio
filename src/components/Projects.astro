@@ -28,7 +28,8 @@ const projects = [
         link: 'https://caloriecounter-bice.vercel.app/',
         github: 'https://github.com/frediiesp/caloriecounter',
         image: '/projects/screencount.webp',
-        tags: [tags.React, tags.TypeScript, tags.Tailwind, tags.Vite, tags.Vercel]
+        tags: [tags.React, tags.TypeScript, tags.Tailwind, tags.Vite, tags.Vercel],
+        class: ''
     },
     {
         title: 'Carrito de Compras JS',
@@ -36,15 +37,8 @@ const projects = [
         link: 'https://carritocompras-iota.vercel.app/',
         github: 'https://github.com/frediiesp/carritocompras',
         image: '/projects/screenshop.webp',
-        tags: [tags.React, tags.JavaScript, tags.CSS, tags.Vite, tags.Vercel]
-    },
-    {
-        title: 'Mi Portafolio',
-        description: 'Hecho desde cero en Astro, como forma de aprendizaje de esta herramienta, está inspirado en el portafolio hecho por midudev. No esta terminado aun, pero planeo agregarle algunos extras.',
-        link: 'https://www.alfredoz.dev/',
-        github: 'https://github.com/frediiesp/portfolio',
-        image: '/projects/screenport.webp',
-        tags: [tags.Astro, tags.Tailwind, tags.Vercel]
+        tags: [tags.React, tags.JavaScript, tags.CSS, tags.Vite, tags.Vercel],
+        class: 'mt-10'
     },
     {
         title: 'Calculadora de Propinas',
@@ -52,7 +46,8 @@ const projects = [
         link: 'https://calculadorapropinas.vercel.app/',
         github: 'https://github.com/frediiesp/calculadorapropinas',
         image: '/projects/screentips.webp',
-        tags: [tags.React, tags.TypeScript, tags.Tailwind, tags.Vite, tags.Vercel]
+        tags: [tags.React, tags.TypeScript, tags.Tailwind, tags.Vite, tags.Vercel],
+        class: 'mt-10'
     },
     {
         title: 'Carrito de Compras TS',
@@ -60,7 +55,8 @@ const projects = [
         link: 'https://carritocompras-ts.vercel.app/',
         github: 'https://github.com/frediiesp/carritocompras_ts',
         image: '/projects/screenshop.webp',
-        tags: [tags.React, tags.TypeScript, tags.CSS, tags.Vite, tags.Vercel]
+        tags: [tags.React, tags.TypeScript, tags.CSS, tags.Vite, tags.Vercel],
+        class: 'mt-10'
     }
 ]
 ---
@@ -72,7 +68,7 @@ const projects = [
 <div>
     {
         projects.map(project => (
-        <article class="mb-10 lg:flex">
+        <article class={`lg:flex ${project.class}`}>
             <div class="pb-5 md:pb-5 lg:pr-10">
                 <a href={project.github}>
                     <h3 class="flex flex-wrap gap-x-2 items-center mb-2 text-xl font-semibold text-yellow-200/90 mt-2"> 
