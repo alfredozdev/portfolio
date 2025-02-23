@@ -15,17 +15,17 @@ import Tailwind from "../../public/icons/Tailwind.astro"
 import Wordpress from "../../public/icons/Wordpress.astro"
 
 const skills = [
-    { name: 'React', icon: React },
     { name: 'Angular', icon: Angular },
     { name: 'JavaScript', icon: JavaScript },
     { name: 'TypeScript', icon: TypeScript },
+    { name: 'Bootstrap', icon: Bootstrap },
+    { name: 'React', icon: React },
     { name: 'Node', icon: Node },
     { name: 'HTML', icon: HTML },
     { name: 'CSS', icon: CSS },
     { name: 'SQL', icon: SQL },
     { name: 'C#', icon: CSharp },
     { name: 'Git', icon: Git },
-    { name: 'Bootstrap', icon: Bootstrap },
     { name: 'Tailwind', icon: Tailwind },
 ]
 ---
@@ -38,11 +38,7 @@ const skills = [
 <ul class="flex gap-10 flex-wrap">
     {skills.map(skill => (
         <li>
-            <span class={
-                    `flex
-                    py-1
-                    transition
-                    hover:scale-105`}>
+            <span class={`flex py-1 transition hover:scale-105`}>
                 <skill.icon class=" size-20" />
             </span>
         </li>
